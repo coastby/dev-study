@@ -12,5 +12,6 @@ public class TestController {
     public String test() {
         System.out.println("test success!");
         return "success";
+
     }
 }

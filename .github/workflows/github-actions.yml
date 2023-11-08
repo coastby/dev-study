@@ -50,7 +50,7 @@ jobs:
       # gradle을 통해 소스를 빌드.
       - name: Build with Gradle
         run: |
-          chmod +x ./gradlew
+#          chmod +x ./gradlew
           ./gradlew clean build -x test
 
       # dockerfile을 통해 이미지를 빌드하고, 이를 docker repo로 push 합니다.

@@ -28,6 +28,11 @@ jobs:
           java-version: '17'
           distribution: "adopt"
 
+      - name: create env file
+        run: |
+          touch .env
+          echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
+
       # gradle caching - 빌드 시간 향상
       - name: Gradle Caching
         uses: actions/cache@v3

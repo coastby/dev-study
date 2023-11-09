@@ -76,8 +76,8 @@ jobs:
           key: ${{ secrets.KEY }}
           envs: GITHUB_SHA
           script: |
-            touch .env
-            echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
+            sudo touch .env
+            sudo echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/dev-study-project
             docker-compose up -d

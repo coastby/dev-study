@@ -81,5 +81,5 @@ jobs:
             sudo echo "DB_URL=${{ secrets.DB_URL }}" | sudo tee -a /.env
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/dev-study-project
-            docker-compose up -d --env-file /.env
+            docker-compose up -d
             docker image prune -f

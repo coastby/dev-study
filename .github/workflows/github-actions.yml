@@ -78,7 +78,7 @@ jobs:
           script: |
             sudo touch /.env
             sudo echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" | sudo tee /.env
-            sudo echo "DB_URL=${{ secrets.DB_URL }}" | sudo tee /.env
+            sudo echo "DB_URL=${{ secrets.DB_URL }}" | sudo tee -a /.env
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/dev-study-project
             docker-compose up -d

@@ -1,7 +1,7 @@
 spring:
 
   datasource:
-    url: jdbc:mariadb://mariadb-1.c1dvuagtpjup.ap-northeast-2.rds.amazonaws.com:3306/test
+    url: ${DB_URL}
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: ${DB_PASSWORD}

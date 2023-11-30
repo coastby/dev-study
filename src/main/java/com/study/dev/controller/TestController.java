@@ -11,7 +11,7 @@ public class TestController {
     @GetMapping
     public String test() {
         System.out.println("test success!");
-        return "20231121 success!";
+        return "20231130 success!";
 
     }
 }

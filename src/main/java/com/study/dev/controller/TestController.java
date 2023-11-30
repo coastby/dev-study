@@ -24,7 +24,8 @@ public class TestController {
     }
 
     @PostMapping("/redis")
-    public String putRedis(Map<String, String> map) {
+    public String putRedis(@RequestBody Map<String, String> map) {
+        System.out.println(map);
         redisTemplate.opsForValue().set(map.get("key"), map.get("value"));
         return "redis put success";
     }

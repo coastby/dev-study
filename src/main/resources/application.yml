@@ -20,9 +20,26 @@ spring:
         ddl-auto: none
 
   redis:
-    host: redis
     port: 6379
     password: ${REDIS_PASSWORD}
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_HOST}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+    auth-code-expiration-millis: 1800000
+
 
 
 # 로그 레벨 설정

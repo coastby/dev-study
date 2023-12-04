@@ -1,5 +1,6 @@
-#spring:
-#
+spring:
+  reids:
+    host: redis
 #  datasource:
 #    url: ${DB_URL}
 #    driver-class-name: org.mariadb.jdbc.Driver

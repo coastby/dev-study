@@ -80,6 +80,8 @@ jobs:
             sudo echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" | sudo tee /.env
             sudo echo "DB_URL=${{ secrets.DB_URL }}" | sudo tee -a /.env
             sudo echo "REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}" | sudo tee -a /.env
+            sudo echo "EMAIL_HOST=${{ secrets.EMAIL_HOST }}" | sudo tee -a /.env
+            sudo echo "EMAIL_PASSWORD=${{ secrets.PASSWORD }}" | sudo tee -a /.env
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/dev-study-project
             docker-compose up -d
